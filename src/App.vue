@@ -1,32 +1,59 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view/>
   </div>
 </template>
+<script>
+export default {
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+</script>
+
+<style>
+.material-icons, .material-icons-outlined {
+  /* font-family: 'Material Icons'; */
+  font-weight: normal;
+  font-style: normal;
+  /* font-size: 42px; */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
-nav {
-  padding: 30px;
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark, .material-icons-outlined.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive, .material-icons-outlined.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light, .material-icons-outlined.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive, .material-icons-outlined.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+/* Rules for sizing the icon. */
+.material-icons.md-18, .material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons.md-24, .material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons.md-36, .material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons.md-42, .material-icons-outlined.md-42 { font-size: 42px; }
+.material-icons.md-48, .material-icons-outlined.md-48 { font-size: 48px; }
+
+body {
+  min-height: 100vh;
+}
+#app {
+  min-height: 100vh;
 }
 </style>
